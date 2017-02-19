@@ -1,0 +1,26 @@
+A = 1;
+f = 5;
+t = 0:0.001:1;
+fun = A*square(2*pi*f*t);
+subplot(211)
+plot(t,fun);
+
+%modulacion a FSK
+if mod(fun,2)==0;
+ask=0;
+else
+    ask=A*cos(8*pi*f*t);
+   
+end
+subplot(212)
+plot(t,ask);
+
+%modulacion a ASK
+if sq==-1;
+fsk=A*cos(4*pi*f*t);
+else
+    fsk=A*cos(2*pi*f*t);
+   
+end
+subplot(213)
+plot(t,fsk);
